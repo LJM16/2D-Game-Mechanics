@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject EnemyPrefab;
+    public GameObject PowerupPrefab;
     public float XRange = 6.4f;
     public float YRange = 2.66f;
     public int EnemyCount =0;
@@ -14,7 +15,7 @@ public class SpawnManager : MonoBehaviour
     {
         
         SpawnEnemyWave(WaveCount);
-        //Instantiate(EnemyPrefab, GenerateSpawnPosition(), EnemyPrefab.transform.rotation);
+        Instantiate(EnemyPrefab, GenerateSpawnPosition(), PowerupPrefab.transform.rotation);
     }
 
     // Update is called once per frame
